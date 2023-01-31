@@ -5,6 +5,7 @@ import json
 #import webserver
 import chess
 import random
+import os
 from googletrans import Translator
 #おじさんには原因がわからなかったのでここはほのかのちゃんに丸投げするで候
 #デフェフェフェフェ♪
@@ -135,6 +136,7 @@ async def test(interaction: discord.Interaction):
 
 #webserver.run()
 
-client.run(load['DISCORD_TOKEN'])
+my_secret = os.environ['DISCORD_TOKEN']
+client.run(my_secret)
 #トークンがトークン
 #知っていましたか？明日って今日の一日後なんですよ
